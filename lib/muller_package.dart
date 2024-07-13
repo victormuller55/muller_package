@@ -13,6 +13,9 @@ export 'app_components/app_error.dart';
 export 'app_components/app_sized_box.dart';
 export 'app_components/app_loading.dart';
 export 'app_components/app_form_field.dart';
+export 'app_components/app_termos_de_uso.dart';
+export 'app_components/app_list_view.dart';
+export 'app_components/app_info_column.dart';
 
 // Constantes
 export 'app_consts/app_colors.dart';

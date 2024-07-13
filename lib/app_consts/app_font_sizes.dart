@@ -3,4 +3,5 @@ class AppFontSizes {
   static double normal = 17;
   static double medium = 20;
   static double big = 23;
+  static double titleSize = 35;
 }

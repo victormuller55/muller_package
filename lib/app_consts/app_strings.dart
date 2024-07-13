@@ -1,8 +1,22 @@
 class AppStrings {
   static const String vazio = "";
+  static const String home = "Home";
+  static const String ultimosServicos = "Ultimos Serviços";
+  static const String ajuda = "Ajuda";
+  static const String editarNomeCPF = "Editar Nome/CPF";
+  static const String editarEmail = "Editar E-mail";
+  static const String editarTelefone = "Editar Telefone";
+  static const String editarSenha = "Editar Senha";
+  static const String meusAgendamentos = "Meus Agendamentos";
+  static const String configuracoes = "Configurações";
   static const String naoFoiPossivelAbrirOLink = "Não foi possivel abrir o link.";
   static const String novaSenha = "Nova Senha (Não obrigatório)";
+  static const String digiteSuaSenha = "Digite sua senha";
+  static const String confirmeSuaSenha = "Confirme sua senha";
+  static const String digiteSeuEmail = "Digite seu e-mail";
+  static const String digiteSeuNome = "Digite seu nome";
   static const String salvar = "Salvar";
+  static const String scissor = "Scissor";
   static const String contatoSoamer = "Contato Soamer";
   static const String cancelar = "Cancelar";
   static const String alterarFoto = "Alterar foto";
@@ -33,11 +47,16 @@ class AppStrings {
   static const String asSenhasNaoSaoIguas = "As senha não são iguais";
   static const String preenchaTodosOsCampos = "Preencha todos os campos";
   static const String recompensas = "Recompensas";
+  static const String barbearias = "Barbearias";
+  static const String nenhumaBarbeariaEncontrada = "Nenhuma barbearia encontrada";
   static const String textoPix = "Cashbacks via PIX podem demorar até 3 dias para serem depositados na conta do usuário.";
   static const String nenhumVoucherEncontrado = "Nenhum Voucher Encontrado";
   static const String totalSaidasHoje = "Total de saídas (Hoje)";
   static const String totalEntradasHoje = "Total de entradas (Hoje)";
   static const String hoje = "Hoje";
+  static const String aceitar = "Aceitar";
+  static const String naoAceitar = "Não Aceitar";
+  static const String mensagemPermissoes = "Para uma experiencia melhor no aplicativo, nós pedimos algumas permissões.";
   static const String todos = "Todos";
   static const String maisTrocados = "Mais Trocados";
   static const String emPromocao = "Em Promoção";
@@ -95,6 +114,8 @@ class AppStrings {
   static const String trocar = "Trocar";
   static const String saldoAtual = "Saldo atual: ";
   static const String proximo = "Proximo";
+  static const String bemVindoAoScissor = "Bem-vindo ao\nScissor!";
+  static const String bemVindoDeVolta = "Bem-vindo\nde Volta!";
 
   static const String explicacaoComoUtilizarVoucher = "A primeira etapa envolve abrir o aplicativo e garantir que você está logado na sua conta. Isso é importante, pois os códigos de resgate geralmente estão vinculados a contas específicas, garantindo que o saldo seja creditado na conta correta. Em seguida, você precisará localizar a opção \"Resgatar Código\" dentro do aplicativo. Essa opção pode estar nas configurações da conta, no menu principal ou em outro local, dependendo do aplicativo em questão. Ao encontrar a opção, você será solicitado a inserir o código de resgate. É fundamental digitar o código com precisão, observando letras maiúsculas e minúsculas, bem como qualquer formatação específica que o código possa exigir. Após inserir o código, você deverá confirmar o resgate clicando em um botão dedicado ou seguindo as instruções fornecidas. Uma vez que o código seja validado e aceito, o saldo correspondente será adicionado à sua conta no aplicativo. Isso normalmente pode ser verificado na seção de saldo ou na página da sua conta.";
   static const String explicacaoTempoVoucher = "Ficamos felizes em informar que os vouchers que disponibilizamos não têm data de expiração. Isso significa que você pode utilizá-los sempre que for conveniente, sem se preocupar com prazos limitados. Acreditamos que a flexibilidade é essencial para que você aproveite ao máximo as vantagens e benefícios oferecidos por esses vouchers.Essa abordagem sem data de validade permite que você planeje suas atividades e aproveite os descontos, serviços ou produtos associados aos vouchers de forma tranquila, sem a pressão de ter que usá-los em um período específico. Queremos garantir que sua experiência seja o mais conveniente e proveitosa possível.Portanto, fique à vontade para usar os vouchers quando for mais conveniente para você, sem pressa ou restrições temporais. Estamos aqui para proporcionar a melhor experiência possível, e a ausência de expiração nos vouchers é mais uma forma de demonstrar nosso compromisso com sua satisfação contínua.";
