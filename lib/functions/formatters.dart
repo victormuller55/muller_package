@@ -1,6 +1,11 @@
 import 'package:intl/intl.dart';
 import 'package:muller_package/app_consts/app_strings.dart';
 
+String formataDinheiro(double value) {
+  final NumberFormat formatter = NumberFormat.simpleCurrency(locale: 'pt_BR');
+  return formatter.format(value);
+}
+
 String formataCPF(String cpf) {
   if (cpf.length != 11) {
     return AppStrings.cpfInvalido;
@@ -50,7 +55,7 @@ String formatarDataApi(String data) {
     String horaMinuto = DateFormat('HH:mm').format(dataRecebida);
     return horaMinuto;
   } else {
-    String dataFormatada = DateFormat('dd/MM/yyyy').format(dataRecebida);
+    String dataFormatada = DateFormat('dd/MM HH:mm').format(dataRecebida);
     return dataFormatada;
   }
 }

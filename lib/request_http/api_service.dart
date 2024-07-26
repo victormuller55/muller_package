@@ -74,6 +74,8 @@ Future<AppResponse> putHTTP({required String endpoint, Map<String, String>? para
 }
 
 Future<AppResponse> getHTTP({required String endpoint, Map<String, String>? parameters}) async {
+
+  print(Uri.parse(endpoint + getParametersFormatted(parameters: parameters)));
   if (await thereInternetConnection()) {
     http.Response endpointResult = await http.get(Uri.parse(endpoint + getParametersFormatted(parameters: parameters)), headers: header);
     if (endpointResult.statusCode == 200) {

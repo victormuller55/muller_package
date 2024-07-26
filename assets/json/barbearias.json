@@ -1,0 +1,144 @@
+{
+  "barbearias": [
+    {
+      "nome": "Barbearia do Victor",
+      "cidade": "Araucária",
+      "estado": "PR",
+      "latitude": -25.5907,
+      "longitude": -49.4047
+    },
+    {
+      "nome": "Barbearia Moderna",
+      "cidade": "Curitiba",
+      "estado": "PR",
+      "latitude": -25.4296,
+      "longitude": -49.2719
+    },
+    {
+      "nome": "Barbearia Estilosa",
+      "cidade": "Araucária",
+      "estado": "PR",
+      "latitude": -25.5934,
+      "longitude": -49.4136
+    },
+    {
+      "nome": "Barbearia Tradicional",
+      "cidade": "Curitiba",
+      "estado": "PR",
+      "latitude": -25.4515,
+      "longitude": -49.2696
+    },
+    {
+      "nome": "Barbearia Elegante",
+      "cidade": "Araucária",
+      "estado": "PR",
+      "latitude": -25.5898,
+      "longitude": -49.4221
+    },
+    {
+      "nome": "Barbearia Clássica",
+      "cidade": "Curitiba",
+      "estado": "PR",
+      "latitude": -25.4486,
+      "longitude": -49.2683
+    },
+    {
+      "nome": "Barbearia da Esquina",
+      "cidade": "Araucária",
+      "estado": "PR",
+      "latitude": -25.5901,
+      "longitude": -49.4197
+    },
+    {
+      "nome": "Barbearia Vintage",
+      "cidade": "Curitiba",
+      "estado": "PR",
+      "latitude": -25.4293,
+      "longitude": -49.2706
+    },
+    {
+      "nome": "Barbearia Top",
+      "cidade": "Araucária",
+      "estado": "PR",
+      "latitude": -25.5883,
+      "longitude": -49.4069
+    },
+    {
+      "nome": "Barbearia Charmosa",
+      "cidade": "Curitiba",
+      "estado": "PR",
+      "latitude": -25.4281,
+      "longitude": -49.2691
+    },
+    {
+      "nome": "Barbearia Premium",
+      "cidade": "Araucária",
+      "estado": "PR",
+      "latitude": -25.5915,
+      "longitude": -49.4099
+    },
+    {
+      "nome": "Barbearia Fashion",
+      "cidade": "Curitiba",
+      "estado": "PR",
+      "latitude": -25.4307,
+      "longitude": -49.2736
+    },
+    {
+      "nome": "Barbearia Estilizada",
+      "cidade": "Araucária",
+      "estado": "PR",
+      "latitude": -25.5922,
+      "longitude": -49.4163
+    },
+    {
+      "nome": "Barbearia Exclusiva",
+      "cidade": "Curitiba",
+      "estado": "PR",
+      "latitude": -25.4518,
+      "longitude": -49.2714
+    },
+    {
+      "nome": "Barbearia Sofisticada",
+      "cidade": "Araucária",
+      "estado": "PR",
+      "latitude": -25.5902,
+      "longitude": -49.4154
+    },
+    {
+      "nome": "Barbearia Única",
+      "cidade": "Curitiba",
+      "estado": "PR",
+      "latitude": -25.4482,
+      "longitude": -49.2697
+    },
+    {
+      "nome": "Barbearia Estilosa",
+      "cidade": "Araucária",
+      "estado": "PR",
+      "latitude": -25.5921,
+      "longitude": -49.4138
+    },
+    {
+      "nome": "Barbearia Central",
+      "cidade": "Curitiba",
+      "estado": "PR",
+      "latitude": -25.4304,
+      "longitude": -49.2722
+    },
+    {
+      "nome": "Barbearia Versátil",
+      "cidade": "Araucária",
+      "estado": "PR",
+      "latitude": -25.5895,
+      "longitude": -49.4041
+    },
+    {
+      "nome": "Barbearia Personalizada",
+      "cidade": "Curitiba",
+      "estado": "PR",
+      "latitude": -25.4297,
+      "longitude": -49.2701
+    }
+  ]
+}

@@ -41,8 +41,8 @@ class AppScrollVertical extends StatelessWidget {
   }
 }
 
-Widget appScrollHorizontal(
-  Widget child, {
+Widget appScrollHorizontal({
+  required Widget child,
   double? height,
   double? width,
 }) {

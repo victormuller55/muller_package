@@ -8,6 +8,7 @@ appFormField(
       double? width,
       double? paddingHeight,
       double? radius,
+      int? maxLines,
       bool? showSenha,
       bool? enable,
       Icon? icon,
@@ -30,6 +31,7 @@ appFormField(
         keyboardType: textInputType ?? TextInputType.name,
         onEditingComplete: () => FocusScope.of(context).nextFocus(),
         validator: validator,
+        maxLines: maxLines,
         enabled: enable,
         inputFormatters: textInputFormatter != null ? [textInputFormatter] : null,
         decoration: InputDecoration(
