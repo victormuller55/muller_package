@@ -6,6 +6,7 @@ Widget appContainer({
   EdgeInsetsGeometry? padding,
   double? height,
   double? width,
+  double? opacity,
   Color? backgroundColor,
   BorderRadiusGeometry? radius,
   BoxBorder? border,
@@ -23,7 +24,7 @@ Widget appContainer({
     height: height,
     width: width,
     decoration: BoxDecoration(
-      image: image != null ? DecorationImage(image: image, fit: BoxFit.cover) : null,
+      image: image != null ? DecorationImage(image: image, fit: BoxFit.cover, opacity: opacity ?? 1) : null,
       color: backgroundColor,
       borderRadius: radius,
       border: border,

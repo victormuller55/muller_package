@@ -37,7 +37,9 @@ class AppStrings {
   static const String digiteSeuEmail = "Digite seu e-mail";
   static const String digiteSuaSenhaEditarDados = "Digite sua senha para a alteração dos dados da conta, por favor.";
   static const String digiteADescricao = "Digite uma descrição";
+  static const String digiteSeuLogin = 'Digite seu login';
   static const String salvar = "Salvar";
+  static const String renault2024Copyright = "© Renault Group 2024";
   static const String scissor = "Scissor";
   static const String contatoSoamer = "Contato Soamer";
   static const String cancelar = "Cancelar";
