@@ -5,16 +5,7 @@ Widget appLoading({
   required Widget child,
   Color? color,
 }) {
-  return Center(
-    child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        child,
-        appSizedBox(height: 30),
-        appText("Carregando...", bold: true, color: color),
-      ],
-    ),
-  );
+  return Center(child: child);
 }
 
 Widget appLoadingAnimation({

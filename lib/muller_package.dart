@@ -22,6 +22,7 @@ export 'app_consts/app_colors.dart';
 export 'app_consts/app_context.dart';
 export 'app_consts/app_font_sizes.dart';
 export 'app_consts/app_form_formatter.dart';
+export 'app_consts/app_validators.dart';
 export 'app_consts/app_icons.dart';
 export 'app_consts/app_radius.dart';
 export 'app_consts/app_spacing.dart';

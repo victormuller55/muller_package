@@ -10,16 +10,14 @@ Widget appTextButton({
   required void Function() onTap,
 }) {
   return GestureDetector(
-    onTap: onTap,
-    child: Padding(
-      padding: EdgeInsets.all(padding ?? 0),
-      child: appText(text, fontSize: fontSize, color: color),
-    )
-  );
+      onTap: onTap,
+      child: Padding(
+        padding: EdgeInsets.all(padding ?? 0),
+        child: appText(text, fontSize: fontSize, color: color),
+      ));
 }
 
-Widget appElevatedButton(
-  Widget child, {
+Widget appElevatedButton(Widget child, {
   required void Function() function,
   Color? backgroundColor,
   Color? borderColor,
@@ -27,14 +25,15 @@ Widget appElevatedButton(
   double? height,
   double? borderRadius,
 }) {
+
   return ElevatedButton(
     onPressed: function,
     style: ElevatedButton.styleFrom(
       elevation: 0,
       backgroundColor: backgroundColor ?? Colors.white,
-      fixedSize: Size(width ?? 300, height ?? 50),
+      fixedSize: Size(width ?? 300, height ?? 40),
       shape: RoundedRectangleBorder(
-        side: BorderSide(color: borderColor ?? backgroundColor ?? Colors.white),
+        side: BorderSide(color: backgroundColor ?? Colors.white),
         borderRadius: BorderRadius.circular(borderRadius ?? 30.0),
       ),
     ),
@@ -42,8 +41,7 @@ Widget appElevatedButton(
   );
 }
 
-Widget appElevatedButtonText(
-  String texto, {
+Widget appElevatedButtonText(String texto, {
   required void Function() function,
   Color? color,
   Color? borderColor,
@@ -52,12 +50,15 @@ Widget appElevatedButtonText(
   double? height,
   double? borderRadius,
 }) {
+
+
   return appElevatedButton(
     appText(
       texto,
       color: textColor ?? const Color.fromRGBO(34, 111, 162, 1),
       bold: true,
       fontSize: AppFontSizes.small,
+      letterSpacing: 1,
     ),
     function: function,
     backgroundColor: color,

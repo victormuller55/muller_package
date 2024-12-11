@@ -33,7 +33,7 @@ AppBar appBar({
     iconTheme: IconThemeData(color: drawerIconColor),
     backgroundColor: appBarBackground ?? AppColors.grey,
     centerTitle: true,
-    title: appText(title.toUpperCase(), bold: true, color: titleColor ?? AppColors.white),
+    title: appText(title.toUpperCase(), bold: true, color: titleColor ?? AppColors.white,fontSize: AppFontSizes.normal),
     leading: leading,
     actions: actions != null ? [...actions, appSizedBox(width: AppSpacing.medium)] : null,
   );
@@ -41,14 +41,13 @@ AppBar appBar({
 
 class CustomDrawerIcon extends StatelessWidget {
   final Color? drawerIconColor;
-
   const CustomDrawerIcon({super.key, this.drawerIconColor});
 
   @override
   Widget build(BuildContext context) {
     return appContainer(
       child: Icon(Icons.menu, color: drawerIconColor),
-      radius: BorderRadius.circular(AppRadius.big),
+      radius: BorderRadius.circular(1000),
     );
   }
 }

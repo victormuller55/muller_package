@@ -17,6 +17,6 @@ class AppColors {
   static Color grey600 = Colors.grey.shade600;
   static Color grey700 = Colors.grey.shade700;
   static Color grey800 = Colors.grey.shade800;
-  static Color grey900 = Colors.grey.shade900;
+  static Color grey900 = Color.fromRGBO(50, 50, 50, 1);
 
 }

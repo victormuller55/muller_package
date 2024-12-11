@@ -1,6 +1,7 @@
 class AppStrings {
   static const String vazio = "";
   static const String enviar = "Enviar";
+  static const String nenhumaImagemSelecionada = "Nenhuma imagem selecionada";
   static const String qualNotaVoceDesejaEnviarABarbearia = "Qual nota você deseja enviar a barbearia?";
   static const String nenhumServicoEncontrado = "Nenhum serviço encontrado.";
   static const String certezaAgendamento = "Tem certeza que deseja marcar esse agendamento como finalizado? NÃO é possivel desfazer isso!";
@@ -73,6 +74,7 @@ class AppStrings {
   static const String recompensas = "Recompensas";
   static const String barbearias = "Barbearias";
   static const String nenhumaBarbeariaEncontrada = "Nenhuma barbearia encontrada";
+  static const String nenhumaPromocaoEncontrada = "Nenhuma promoção encontrada";
   static const String textoPix = "Cashbacks via PIX podem demorar até 3 dias para serem depositados na conta do usuário.";
   static const String nenhumVoucherEncontrado = "Nenhum Voucher Encontrado";
   static const String totalSaidasHoje = "Total de saídas (Hoje)";

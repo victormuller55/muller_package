@@ -1,6 +1,8 @@
 import 'package:intl/intl.dart';
 import 'package:muller_package/app_consts/app_strings.dart';
 
+
+
 String formataDinheiro(double value) {
   final NumberFormat formatter = NumberFormat.simpleCurrency(locale: 'pt_BR');
   return formatter.format(value);

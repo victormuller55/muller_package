@@ -22,7 +22,6 @@ Widget appText(
       overflow: overflow == true ? TextOverflow.ellipsis : null,
       fontWeight: bold == true ? FontWeight.bold : FontWeight.normal,
       letterSpacing: letterSpacing,
-
       fontFamily: fontFamily ?? 'lato',
       decoration: cortado ?? false ? TextDecoration.lineThrough : null,
     ),
