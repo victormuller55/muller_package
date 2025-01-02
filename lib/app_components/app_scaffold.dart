@@ -3,8 +3,8 @@ import 'package:muller_package/app_components/app_bar.dart';
 import 'package:muller_package/app_consts/app_colors.dart';
 
 Widget scaffold({
-  required Widget body,
   required String title,
+  required Widget body,
   Color? background,
   Color? appBarColor,
   Color? titleColor,

@@ -16,14 +16,14 @@ Widget appError(ErrorModel errorModel, {required void Function() function}) {
         appSizedBox(height: AppSpacing.big),
         appText(
           errorModel.erro ?? "Ocorreu um erro",
-          color: AppColors.white,
+          color: AppColors.grey700,
           bold: true,
           fontSize: 20,
         ),
         appSizedBox(height: AppSpacing.normal),
         appText(
           errorModel.mensagem ?? "Tente novamente mais tarde",
-          color: AppColors.grey100,
+          color: AppColors.grey,
         ),
         appSizedBox(height: AppSpacing.medium),
         appElevatedButtonText(

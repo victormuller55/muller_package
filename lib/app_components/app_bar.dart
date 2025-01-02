@@ -31,9 +31,9 @@ AppBar appBar({
   return AppBar(
     elevation: 0,
     iconTheme: IconThemeData(color: drawerIconColor),
-    backgroundColor: appBarBackground ?? AppColors.grey,
+    backgroundColor: appBarBackground ?? Colors.blue,
     centerTitle: true,
-    title: appText(title.toUpperCase(), bold: true, color: titleColor ?? AppColors.white,fontSize: AppFontSizes.normal),
+    title: appText(title.toUpperCase(), bold: true, color: titleColor ?? AppColors.white,fontSize: AppFontSizes.small),
     leading: leading,
     actions: actions != null ? [...actions, appSizedBox(width: AppSpacing.medium)] : null,
   );
