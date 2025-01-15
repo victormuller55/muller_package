@@ -25,13 +25,11 @@ class AppScrollVertical extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.all(padding ?? AppSpacing.zero),
               child: IntrinsicHeight(
-                child: center
-                    ? Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [child],
-                      )
-                    : child,
+                child: center ? Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [child],
+                ) : child,
               ),
             ),
           ),

@@ -1,16 +1,16 @@
-import 'package:connectivity/connectivity.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 
-Future<bool> thereInternetConnection() async {
-  var connectivityResult = await (Connectivity().checkConnectivity());
-
-  if (connectivityResult == ConnectivityResult.mobile ||
-      connectivityResult == ConnectivityResult.wifi) {
-    return true;
-  } else {
-    return false;
-  }
+Future<bool> hasInternetConnection() async {
+  List<ConnectivityResult> connectivityResult = await Connectivity().checkConnectivity();
+  return connectivityResult.first == ConnectivityResult.mobile || connectivityResult.first == ConnectivityResult.wifi;
 }
 
-String noInternetConnectionError() {
-  return '{"tipo":"BAD GATEWAY","mensagem":"Verifique sua conexão com a internet","erro":" Sem conexão com a internet"}';
+String thereInternetConnection() {
+  return '''
+{
+  "tipo": "BAD GATEWAY",
+  "mensagem": "Verifique sua conexão com a internet",
+  "erro": "Sem conexão com a internet"
+}
+''';
 }

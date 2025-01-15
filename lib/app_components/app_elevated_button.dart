@@ -10,14 +10,16 @@ Widget appTextButton({
   required void Function() onTap,
 }) {
   return GestureDetector(
-      onTap: onTap,
-      child: Padding(
-        padding: EdgeInsets.all(padding ?? 0),
-        child: appText(text, fontSize: fontSize, color: color),
-      ));
+    onTap: onTap,
+    child: Padding(
+      padding: EdgeInsets.all(padding ?? 0),
+      child: appText(text, fontSize: fontSize, color: color),
+    ),
+  );
 }
 
-Widget appElevatedButton(Widget child, {
+Widget appElevatedButton(
+  Widget child, {
   required void Function() function,
   Color? backgroundColor,
   Color? borderColor,
@@ -25,7 +27,6 @@ Widget appElevatedButton(Widget child, {
   double? height,
   double? borderRadius,
 }) {
-
   return ElevatedButton(
     onPressed: function,
     style: ElevatedButton.styleFrom(
@@ -41,7 +42,8 @@ Widget appElevatedButton(Widget child, {
   );
 }
 
-Widget appElevatedButtonText(String texto, {
+Widget appElevatedButtonText(
+  String texto, {
   required void Function() function,
   Color? color,
   Color? borderColor,
@@ -50,8 +52,6 @@ Widget appElevatedButtonText(String texto, {
   double? height,
   double? borderRadius,
 }) {
-
-
   return appElevatedButton(
     appText(
       texto,

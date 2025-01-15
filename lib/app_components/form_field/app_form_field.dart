@@ -15,7 +15,6 @@ TextStyle _style({Color? color}) {
 }
 
 class AppFormField {
-
   final TextEditingController _controller = TextEditingController();
   late final Widget formulario;
 
@@ -70,8 +69,8 @@ class AppFormField {
     );
   }
 
+  // Getter para obter o valor
   String get value => _controller.text;
-
   TextEditingController get controller => _controller;
 }
 

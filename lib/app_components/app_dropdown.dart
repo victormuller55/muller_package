@@ -3,7 +3,7 @@ import 'package:muller_package/muller_package.dart';
 
 OutlineInputBorder _border({double? radius, double? width, Color? color}) {
   return OutlineInputBorder(
-    borderSide: BorderSide(color: Colors.transparent, width: width ?? 0.5),
+    borderSide: BorderSide(color: color ?? Colors.transparent, width: width ?? 0.5),
     borderRadius: BorderRadius.circular(radius ?? 40),
   );
 }
@@ -13,12 +13,12 @@ TextStyle _style({Color? color}) {
 }
 
 class AppDropdown<T> {
-
   late final Widget dropdown;
+  List<T> items;
   T? selectedValue;
 
   AppDropdown({
-    required List<T> items,
+    required this.items, // Mantém como obrigatório
     required String hint,
     T? defaultValue,
     double? width,
@@ -53,7 +53,10 @@ class AppDropdown<T> {
           ),
           validator: validator,
           items: items.map((T item) {
-            return DropdownMenuItem<T>(value: item, child: appText(item.toString()));
+            return DropdownMenuItem<T>(
+              value: item,
+              child: appText(item.toString()),
+            );
           }).toList(),
           onChanged: (value) {
             selectedValue = value;
@@ -64,6 +67,11 @@ class AppDropdown<T> {
     );
   }
 
-  Widget get widget => dropdown;
   T? get value => selectedValue;
+
+  set value(T? newValue) {
+    selectedValue = newValue;
+  }
+
+  Widget get widget => dropdown;
 }

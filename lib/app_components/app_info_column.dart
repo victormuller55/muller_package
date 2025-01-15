@@ -22,9 +22,21 @@ Widget appInfoColumn({
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: crossAxisAlignment ?? CrossAxisAlignment.start,
         children: [
-          appText(title, bold: true, color: titleColor ?? AppColors.white, fontSize: titleSize ?? AppFontSizes.normal, cortado: cortarTitle),
+          appText(
+            title,
+            bold: true,
+            color: titleColor ?? AppColors.white,
+            fontSize: titleSize ?? AppFontSizes.normal,
+            cortado: cortarTitle,
+          ),
           SizedBox(height: spacing ?? false ? 5 : 0),
-          appText(value, color: valueColor ?? AppColors.white, overflow: ovewflowValue ?? true, fontSize: valueSize, cortado: cortarValue),
+          appText(
+            value,
+            color: valueColor ?? AppColors.white,
+            overflow: ovewflowValue ?? true,
+            fontSize: valueSize,
+            cortado: cortarValue,
+          ),
         ],
       ),
     );
