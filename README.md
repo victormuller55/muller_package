@@ -1,39 +1,94 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Biblioteca de Componentes Flutter
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+Esta é uma biblioteca de componentes Flutter desenvolvida em Dart, projetada para facilitar a criação de aplicações, fornecendo componentes reutilizáveis e um sistema de serviço completo. O projeto foi desenvolvido utilizando o Android Studio.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+## Componentes Criados
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+- **Formulários:** Campos de entrada otimizados para diferentes tipos de dados.
+- **Dropdowns:** Menus suspensos estilizados e configuráveis.
+- **Containers:** Layouts personalizados para organização de conteúdo.
+- **Card:** Elementos visuais para exibição de informações.
+- **Sistema de Service:** Implementação completa para realização de requisições em APIs.
+- **Funções de Formatação, Validação e Masks:** Utilitários para manipulação de dados.
 
-## Features
+## Estrutura do Projeto
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+O projeto está organizado nas seguintes pastas:
 
-## Getting started
+- **componentes:** Contém todos os widgets reutilizáveis.
+- **constantes:** Define constantes como cores, tamanhos, entre outros.
+- **funções:** Inclui funções de formatação, validação e aplicação de masks.
+- **models:** Define os modelos de erros utilizados pelo sistema de service.
+- **service:** Contém a implementação completa para realizar requisições em APIs.
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+## Como Utilizar a Biblioteca
 
-## Usage
+### 1. Instalação
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Adicione a biblioteca ao arquivo `pubspec.yaml` do seu projeto:
 
-```dart
-const like = 'sample';
+```yaml
+  dependencies:
+    muller_package:
+      path: ../muller_package
 ```
 
-## Additional information
+Certifique-se de que o projeto foi baixado e está na mesma pasta do projeto que irá utilizá-lo.
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+Em seguida, execute o comando:
+
+```bash
+flutter pub get
+```
+
+### 2. Importação de Componentes
+
+Para utilizar um componente, importe-o no arquivo desejado. Por exemplo, para usar um campo de formulário:
+
+```dart
+import 'package:muller_package/muller_package.dart';
+```
+
+### 3. Exemplos de Uso
+
+**Exemplo de Service:**
+```dart
+String endpoint = "http://localhost:3000/v1/example/items";
+
+Future<List<ItemModel>> fetchItems() async {
+  AppResponse response = await getHTTP(endpoint: "$endpoint/all");
+  List<dynamic> jsonResponse = jsonDecode(response.body);
+  List<ItemModel> items = jsonResponse.map((item) => ItemModel.fromJson(item)).toList();
+
+  return items;
+}
+```
+
+**Exemplo de Formulário:**
+```dart
+late AppFormField _descricaoProdutoForm;
+
+@override
+void initState() {
+  _descricaoProdutoForm = AppFormField(
+    context: context,
+    hint: 'Nome do produto',
+    icon: const Icon(Icons.shopping_cart),
+    width: 300,
+    radius: AppRadius.small,
+  );
+
+  super.initState();
+}
+
+_descricaoProdutoForm.formulario,
+```
+
+## Observações
+
+- Certifique-se de que todas as dependências estão atualizadas.
+- Personalize os componentes conforme a necessidade do seu projeto.
+
+---
+
+Para dúvidas ou sugestões, entre em contato com Victor Muller.
