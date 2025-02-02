@@ -51,6 +51,7 @@ class AppDropdown<T> {
             contentPadding: EdgeInsets.symmetric(vertical: paddingHeight ?? 10.0, horizontal: 25),
             hintStyle: _style(color: Colors.grey.shade400),
           ),
+          dropdownColor: backgroundColor,
           validator: validator,
           items: items.map((T item) {
             return DropdownMenuItem<T>(

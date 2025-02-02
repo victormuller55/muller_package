@@ -19,6 +19,7 @@ Widget appError(ErrorModel errorModel, {required void Function() function}) {
           color: AppColors.grey700,
           bold: true,
           fontSize: 20,
+          textAlign: TextAlign.center
         ),
         appSizedBox(height: AppSpacing.normal),
         appText(
