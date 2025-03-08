@@ -11,12 +11,18 @@ OutlineInputBorder _border({double? radius, double? width, Color? color}) {
 }
 
 TextStyle _style({Color? color}) {
-  return TextStyle(fontFamily: 'lato', fontSize: 13, color: color ?? Colors.black);
+  return TextStyle(
+    fontFamily: 'lato',
+    fontSize: 13,
+    color: color ?? Colors.black,
+    letterSpacing: 1,
+  );
 }
 
 class AppFormField {
   final TextEditingController _controller = TextEditingController();
   late final Widget formulario;
+  late final FocusNode _focusNode;
 
   AppFormField({
     required BuildContext context,
@@ -27,6 +33,7 @@ class AppFormField {
     int? maxLines,
     bool? showContent,
     bool? enable,
+    bool? dense,
     Color? inputColor,
     Color? backgroundColor,
     Widget? suffixIcon,
@@ -34,13 +41,22 @@ class AppFormField {
     TextInputType? textInputType,
     TextInputFormatter? textInputFormatter,
     String? Function(String? value)? validator,
+    void Function()? onTap,
+    bool showKeyboard = true,  // Parâmetro adicionado
   }) {
+    _focusNode = FocusNode();
+
+    if (!showKeyboard) {
+      _focusNode.canRequestFocus = false;
+    }
+
     formulario = Padding(
       padding: const EdgeInsets.only(top: 10),
       child: SizedBox(
         width: width,
         child: TextFormField(
           enabled: enable,
+          onTap: onTap,
           controller: _controller,
           validator: validator,
           maxLines: maxLines ?? 1,
@@ -51,19 +67,21 @@ class AppFormField {
           style: _style(color: inputColor),
           decoration: InputDecoration(
             hintText: hint,
+            isDense: dense,
             filled: true,
             prefixIcon: icon,
             suffix: suffixIcon,
-            border: _border(),
-            enabledBorder: _border(),
-            disabledBorder: _border(),
-            focusedBorder: _border(),
-            errorBorder: _border(color: AppColors.red),
-            focusedErrorBorder: _border(color: AppColors.red),
+            border: _border(radius: radius),
+            enabledBorder: _border(radius: radius),
+            disabledBorder: _border(radius: radius),
+            focusedBorder: _border(radius: radius),
+            errorBorder: _border(color: AppColors.red, radius: radius),
+            focusedErrorBorder: _border(color: AppColors.red, radius: radius),
             fillColor: backgroundColor ?? Colors.white,
             contentPadding: EdgeInsets.symmetric(vertical: paddingHeight ?? 10.0, horizontal: 25),
-            hintStyle:  _style(color: Colors.grey.shade400),
+            hintStyle: _style(color: Colors.grey),
           ),
+          focusNode: _focusNode,  // Aplicando o FocusNode
         ),
       ),
     );
@@ -71,6 +89,7 @@ class AppFormField {
 
   // Getter para obter o valor
   String get value => _controller.text;
+
   TextEditingController get controller => _controller;
 }
 

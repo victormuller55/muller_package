@@ -7,6 +7,7 @@ AppBar appBar({
   Color? titleColor,
   Color? appBarBackground,
   bool? hideBackArrow,
+  bool? centerTitle,
   Widget? drawer,
   List<Widget>? actions,
 }) {
@@ -32,7 +33,7 @@ AppBar appBar({
     elevation: 0,
     iconTheme: IconThemeData(color: drawerIconColor),
     backgroundColor: appBarBackground ?? Colors.blue,
-    centerTitle: true,
+    centerTitle: centerTitle ?? true,
     title: appText(title.toUpperCase(), bold: true, color: titleColor ?? AppColors.white,fontSize: AppFontSizes.small),
     leading: leading,
     actions: actions != null ? [...actions, appSizedBox(width: AppSpacing.medium)] : null,

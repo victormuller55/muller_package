@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:muller_package/app_components/app_text.dart';
+import 'package:muller_package/app_consts/app_colors.dart';
 import 'package:muller_package/app_consts/app_font_sizes.dart';
 
 Widget appTextButton({
@@ -9,11 +10,14 @@ Widget appTextButton({
   Color? color,
   required void Function() onTap,
 }) {
-  return GestureDetector(
-    onTap: onTap,
-    child: Padding(
-      padding: EdgeInsets.all(padding ?? 0),
-      child: appText(text, fontSize: fontSize, color: color),
+  return TextButton(
+    onPressed:onTap,
+    child: appText(
+      text.toUpperCase(),
+      fontSize: fontSize,
+      color: color,
+      letterSpacing: 1,
+      bold: true,
     ),
   );
 }
@@ -34,7 +38,7 @@ Widget appElevatedButton(
       backgroundColor: backgroundColor ?? Colors.white,
       fixedSize: Size(width ?? 300, height ?? 40),
       shape: RoundedRectangleBorder(
-        side: BorderSide(color: backgroundColor ?? Colors.white),
+        side: BorderSide(color: borderColor ?? AppColors.transparent),
         borderRadius: BorderRadius.circular(borderRadius ?? 30.0),
       ),
     ),
@@ -49,6 +53,7 @@ Widget appElevatedButtonText(
   Color? borderColor,
   Color? textColor,
   double? width,
+  double? fontSize,
   double? height,
   double? borderRadius,
 }) {
@@ -57,7 +62,7 @@ Widget appElevatedButtonText(
       texto,
       color: textColor ?? const Color.fromRGBO(34, 111, 162, 1),
       bold: true,
-      fontSize: AppFontSizes.small,
+      fontSize: fontSize ??AppFontSizes.small,
       letterSpacing: 1,
     ),
     function: function,

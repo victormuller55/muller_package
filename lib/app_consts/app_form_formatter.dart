@@ -11,4 +11,6 @@ class AppFormFormatters {
   static MaskTextInputFormatter porcentagemFormatter = MaskTextInputFormatter(mask: '##%', filter: {"#": RegExp(r'[0-9]')});
   static MaskTextInputFormatter diasFormatter = MaskTextInputFormatter(mask: '## dias', filter: {"#": RegExp(r'[0-9]')});
   static MaskTextInputFormatter idFormatter = MaskTextInputFormatter(mask: '###-###', filter: {"#": RegExp(r'[0-9]')});
+  static MaskTextInputFormatter cepFormatter = MaskTextInputFormatter(mask: '#####-###', filter: {"#": RegExp(r'[0-9]')});
 }
+ // 83709-320

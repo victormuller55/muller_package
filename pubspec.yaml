@@ -10,12 +10,14 @@ dependencies:
   connectivity_plus: ^6.1.1
   flutter:
     sdk: flutter
+  flutter_snackbar_plus: ^0.5.1
   http: ^1.2.1
   intl: ^0.19.0
   keyboard_avoider: ^0.2.0
   lottie: ^3.1.2
   mask_text_input_formatter: ^2.9.0
   pin_code_fields: ^8.0.1
+  snacky: ^0.5.6
 
 dev_dependencies:
   flutter_test:

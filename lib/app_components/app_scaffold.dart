@@ -12,6 +12,7 @@ Widget scaffold({
   bool? hideBackIcon,
   bool? extendBody,
   bool? showAppBar,
+  bool? centerTitle,
   GlobalKey? key,
   Widget? bottomNavigationBar,
   Widget? floatingActionButton,
@@ -28,6 +29,7 @@ Widget scaffold({
             actions: actions,
             appBarBackground: appBarColor,
             drawer: drawer,
+            centerTitle: centerTitle,
           )
         : null,
     extendBody: extendBody ?? false,
