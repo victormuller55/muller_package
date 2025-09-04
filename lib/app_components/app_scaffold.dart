@@ -5,6 +5,7 @@ import 'package:muller_package/app_consts/app_colors.dart';
 Widget scaffold({
   required String title,
   required Widget body,
+  String? hero,
   Color? background,
   Color? appBarColor,
   Color? titleColor,
@@ -30,6 +31,7 @@ Widget scaffold({
             appBarBackground: appBarColor,
             drawer: drawer,
             centerTitle: centerTitle,
+            hero: hero,
           )
         : null,
     extendBody: extendBody ?? false,

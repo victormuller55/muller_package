@@ -11,7 +11,7 @@ Widget appTextButton({
   required void Function() onTap,
 }) {
   return TextButton(
-    onPressed:onTap,
+    onPressed: onTap,
     child: appText(
       text.toUpperCase(),
       fontSize: fontSize,
@@ -62,7 +62,7 @@ Widget appElevatedButtonText(
       texto,
       color: textColor ?? const Color.fromRGBO(34, 111, 162, 1),
       bold: true,
-      fontSize: fontSize ??AppFontSizes.small,
+      fontSize: fontSize ?? AppFontSizes.small,
       letterSpacing: 1,
     ),
     function: function,
@@ -71,5 +71,48 @@ Widget appElevatedButtonText(
     height: height,
     borderColor: borderColor,
     borderRadius: borderRadius,
+  );
+}
+
+Widget appElevatedButtonTextGradient(
+  String texto, {
+  required void Function() function,
+  Color? borderColor,
+  Color? textColor,
+  double? width,
+  double? fontSize,
+  double? height,
+  double? borderRadius,
+  Gradient? gradient,
+}) {
+  return Container(
+    width: width ?? 300,
+    height: height ?? 40,
+    decoration: BoxDecoration(
+      gradient: gradient ??
+          LinearGradient(
+            colors: [Colors.blue, Colors.lightBlueAccent],
+            begin: Alignment.centerRight,
+            end: Alignment.centerLeft,
+          ),
+      borderRadius: BorderRadius.circular(borderRadius ?? 30),
+      border: Border.all(color: borderColor ?? Colors.transparent),
+    ),
+    child: Material(
+      color: Colors.transparent,
+      child: InkWell(
+        borderRadius: BorderRadius.circular(borderRadius ?? 30),
+        onTap: function,
+        child: Center(
+          child: appText(
+            texto,
+            color: textColor ?? Colors.white,
+            bold: true,
+            fontSize: fontSize ?? AppFontSizes.small,
+            letterSpacing: 1,
+          ),
+        ),
+      ),
+    ),
   );
 }

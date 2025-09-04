@@ -33,6 +33,7 @@ export 'functions/formatters.dart';
 export 'functions/navigation.dart';
 export 'functions/util.dart';
 export 'functions/validators.dart';
+export 'functions/image.dart';
 
 // Models
 export 'models/error_model.dart';

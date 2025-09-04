@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:muller_package/muller_package.dart';
 
-AppBar appBar({
+AppBar  appBar({
   required Color? drawerIconColor,
   required String title,
+  String? hero,
   Color? titleColor,
   Color? appBarBackground,
   bool? hideBackArrow,
@@ -11,7 +12,6 @@ AppBar appBar({
   Widget? drawer,
   List<Widget>? actions,
 }) {
-
   Widget leading = IconButton(
     onPressed: () => Navigator.pop(AppContext.context),
     icon: const Icon(Icons.arrow_back_outlined),
@@ -34,14 +34,22 @@ AppBar appBar({
     iconTheme: IconThemeData(color: drawerIconColor),
     backgroundColor: appBarBackground ?? Colors.blue,
     centerTitle: centerTitle ?? true,
-    title: appText(title.toUpperCase(), bold: true, color: titleColor ?? AppColors.white,fontSize: AppFontSizes.small),
+    title: Hero(
+        tag: hero ?? '',
+        child: appText(title.toUpperCase(),
+            bold: true,
+            color: titleColor ?? AppColors.white,
+            fontSize: AppFontSizes.small)),
     leading: leading,
-    actions: actions != null ? [...actions, appSizedBox(width: AppSpacing.medium)] : null,
+    actions: actions != null
+        ? [...actions, appSizedBox(width: AppSpacing.medium)]
+        : null,
   );
 }
 
 class CustomDrawerIcon extends StatelessWidget {
   final Color? drawerIconColor;
+
   const CustomDrawerIcon({super.key, this.drawerIconColor});
 
   @override

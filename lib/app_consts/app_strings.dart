@@ -1,4 +1,11 @@
 class AppStrings {
+  static const String segundaFeira = "Segunda-feira";
+  static const String tercaFeira = "Terça-feira";
+  static const String quartaFeira = "Quarta-feira";
+  static const String quintaFeira = "Quinta-feira";
+  static const String sextaFeira = "Sexta-feira";
+  static const String sabado = "Sábado";
+  static const String domingo = "Domingo";
   static const String vazio = "";
   static const String enviar = "Enviar";
   static const String nenhumaImagemSelecionada = "Nenhuma imagem selecionada";
@@ -7,6 +14,7 @@ class AppStrings {
   static const String certezaAgendamento = "Tem certeza que deseja marcar esse agendamento como finalizado? NÃO é possivel desfazer isso!";
   static const String verPerfil = "Ver Perfil";
   static const String opcoes = "Opções";
+  static const String imagem = "Imagem";
   static const String finalizarServico = "Finalizar serviço";
   static const String loginEfetuadoComSucesso = "Login efetuado com sucesso";
   static const String informacoesDoServico = "Informações do serviço";
