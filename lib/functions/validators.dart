@@ -15,6 +15,7 @@ bool validaEmail(String value) {
   }
   return true;
 }
+
 bool validaCPF(String value) {
 
   if (value.isEmpty) {

@@ -5,7 +5,8 @@ import 'package:muller_package/app_consts/app_colors.dart';
 OutlineInputBorder _borderOutlined(
     {double? radius, double? width, Color? color}) {
   return OutlineInputBorder(
-    borderSide: BorderSide(color: Colors.transparent, width: width ?? 0.5),
+    borderSide:
+        BorderSide(color: color ?? Colors.transparent, width: width ?? 1),
     borderRadius: BorderRadius.circular(radius ?? 40),
   );
 }
@@ -28,7 +29,6 @@ TextStyle _style({Color? color, double? size}) {
 }
 
 class AppFormField {
-
   final TextEditingController _controller = TextEditingController();
 
   late final Widget formulario;
@@ -66,6 +66,14 @@ class AppFormField {
       _focusNode.canRequestFocus = false;
     }
 
+    InputBorder border = underline ?? false
+        ? _borderUnderline(radius: radius, color: borderColor)
+        : _borderOutlined(radius: radius, color: borderColor);
+
+    InputBorder errorBorder = underline ?? false
+        ? _borderUnderline(radius: radius, color: AppColors.red)
+        : _borderOutlined(radius: radius, color: AppColors.red);
+
     formulario = Padding(
       padding: const EdgeInsets.only(top: 10),
       child: SizedBox(
@@ -81,7 +89,7 @@ class AppFormField {
           onChanged: onChange,
           onEditingComplete: () => FocusScope.of(context).nextFocus(),
           inputFormatters:
-          textInputFormatter != null ? [textInputFormatter] : null,
+              textInputFormatter != null ? [textInputFormatter] : null,
           style: _style(color: inputColor, size: fontSize),
           decoration: InputDecoration(
             hintText: hint,
@@ -90,27 +98,17 @@ class AppFormField {
             prefixIcon: icon,
             suffix: suffixIcon,
             prefixIconColor: iconColor,
-            border: underline ?? false
-                ? _borderUnderline(radius: radius, color: borderColor)
-                : _borderOutlined(radius: radius, color: borderColor),
-            enabledBorder: underline ?? false
-                ? _borderUnderline(radius: radius, color: borderColor)
-                : _borderOutlined(radius: radius, color: borderColor),
-            disabledBorder: underline ?? false
-                ? _borderUnderline(radius: radius, color: borderColor)
-                : _borderOutlined(radius: radius, color: borderColor),
-            focusedBorder: underline ?? false
-                ? _borderUnderline(radius: radius, color: borderColor)
-                : _borderOutlined(radius: radius, color: borderColor),
-            errorBorder: underline ?? false
-                ? _borderUnderline(radius: radius, color: AppColors.red)
-                : _borderOutlined(color: AppColors.red, radius: radius),
-            focusedErrorBorder: underline ?? false
-                ? _borderUnderline(radius: radius, color: AppColors.red)
-                : _borderOutlined(color: AppColors.red, radius: radius),
+            border: border,
+            enabledBorder: border,
+            disabledBorder: border,
+            focusedBorder: border,
+            errorBorder: errorBorder,
+            focusedErrorBorder: errorBorder,
             fillColor: backgroundColor ?? Colors.white,
             contentPadding: EdgeInsets.symmetric(
-                vertical: paddingHeight ?? 10.0, horizontal: 25),
+              vertical: paddingHeight ?? 10.0,
+              horizontal: 25,
+            ),
             hintStyle: _style(color: hintColor ?? Colors.grey, size: fontSize),
           ),
           focusNode: _focusNode, // Aplicando o FocusNode

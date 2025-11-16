@@ -36,7 +36,7 @@ Widget appElevatedButton(
     style: ElevatedButton.styleFrom(
       elevation: 0,
       backgroundColor: backgroundColor ?? Colors.white,
-      fixedSize: Size(width ?? 300, height ?? 40),
+      fixedSize: Size(width ?? 300, height ?? 50),
       shape: RoundedRectangleBorder(
         side: BorderSide(color: borderColor ?? AppColors.transparent),
         borderRadius: BorderRadius.circular(borderRadius ?? 30.0),
@@ -87,7 +87,7 @@ Widget appElevatedButtonTextGradient(
 }) {
   return Container(
     width: width ?? 300,
-    height: height ?? 40,
+    height: height ?? 50,
     decoration: BoxDecoration(
       gradient: gradient ??
           LinearGradient(
